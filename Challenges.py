@@ -415,3 +415,252 @@ print(fruitTrees)
 appleTrees.reverse()
 print(appleTrees)
 
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# 1. Create a tuple and print it:
+cherryTreeTuple = ("Japanese", "sour", "black", "wild")
+print(cherryTreeTuple)
+
+
+# 2. Loop through the tuple items by using a for loop:
+for c in cherryTreeTuple: print(c)
+
+
+# 3. Use the count() mehtod on the tuple:
+numberOfJapaneseCherryTrees = cherryTreeTuple.count("Japanese")
+print(numberOfJapaneseCherryTrees)
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# 1. Create a set:
+painkillers = {"Acetaminophen", "Ibuprofen", "Naproxen", "Diclofenac topical", "Aspirin"}
+# Note that the items will appear in random order when printed, since they are unordered:
+print(painkillers)
+
+
+# 2. Add an item to the set using the add() method:
+painkillers.add("Demerol")
+print(painkillers)
+
+
+# 3. Use the remove() method to take an item out of the set:
+painkillers.remove("Demerol")
+print(painkillers)
+
+
+# 4. Use the difference() method on two sets to show only the items that exist in the first set and NOT in the second set:
+heartattackRisk = {"Ibuprofen", "Diclofenac topical", "Naproxen"}
+
+
+safestAdultPainkillers = painkillers.difference(heartattackRisk)
+print(safestAdultPainkillers)
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# Dictionaries are a specialized type of list.
+# The first item is a key; the second item is its value. dictionary={"key":"value"}  Together they form a key-value pair. A dictionary is an UNordered collection of key-value pairs.
+
+
+myDictionary = {'index1':1, 'index2':2, 'index3':355}
+print(myDictionary)
+
+
+# To get only the value associated with one key:
+print(myDictionary['index3'])
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+
+# You can nest a dictionary inside of another dictionary!
+dictionaryUsers = {"employee1234":{"fName":"Bob", "lName":"Barker", "phone":"123-456-7890"}, "employee12345":{"fName":"Mary", "lName":"McKraken", "phone":"987-654-3210"}, "employee123456":{"fName":"Sam", "lName":"Smith", "phone":"555-111-2222"}  }
+
+
+# To call on the second item in the dictionary:
+print(dictionaryUsers["employee12345"])
+
+
+# To pull out only one element, such as the phone number of the desired employee:
+print(dictionaryUsers["employee12345"]["phone"])
+
+
+# Use {} wild cards for the first and last names,
+# then use the \n to go down one line,
+# then use a {} wild card for the phone number,
+# then use the format() method with the necessary variables listed:
+print( "User: {} {} \nPhone: {}".format(dictionaryUsers["employee12345"]["fName"], dictionaryUsers["employee12345"]["lName"], dictionaryUsers["employee12345"]["phone"]) )
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+# As of Python version 3.7, dictionaries are ordered.  However, previously (in Python 3.6 and earlier) dictionaries were unordered.
+
+# 1. Create a dictionary:
+pickupTruck = {
+    "make":"Ford",
+    "model":"Ranger",
+    "year":1991,
+    "color":"white"
+}
+
+
+# Viewable using:
+print(pickupTruck)
+
+
+
+
+# 2. use the get() method on the dictionary to return the value of an item with a specified key:
+model = pickupTruck.get("model")
+print(model)
+
+
+
+
+# 3. Change a value within the dictionary by referring to its key name:
+pickupTruck["color"] = "blue"
+print(pickupTruck)
+
+
+
+
+# 4. Add an item to the dictionary by using a new index key and assigning a value to it:
+pickupTruck["transmission"] = "manual"
+print(pickupTruck)
+
+
+
+
+# 5. Create a nested dictionary:
+BlueyFamily = {
+    "Mum": {
+        "name":"Chilli",
+        "breed":"red heeler",
+        "voiced by":"Melanie Zanetti"
+    },
+    "Dad": {
+        "name":"Bandit",
+        "breed":"blue heeler",
+        "voiced by":"Dave McCormack"
+    },
+    "eldest": {
+        "name":"Bluey Christine",
+        "breed":"Blue Heeler",
+        "age":6
+    },
+    "youngest":{
+        "name":"Bingo",
+        "breed":"Red Heeler",
+        "age":4
+    }
+}
+
+
+
+
+print(BlueyFamily)
+
+
+# 6. Use the fromkeys() method to create a dictionary with the specified keys and one specified value:
+x = ("color1", "color2", "color3")
+y = "red"
+
+
+combinedDictionary = dict.fromkeys(x,y)
+
+
+print(combinedDictionary)
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# An array is a collection of similar values systematically stored within a collection object.
+# Python treats collection objects such as liss, tuples, and dictionaries as arrays.
+
+
+color = ['red', 'blue', 'green', 'orange', 'pink', 'purple', 'yellow', 'black', 'brown']
+
+
+print(color)
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# A data structure is a collection of data values arranged in a special orientation where the data can be quickly accessed from the computer's memory and applied.
+
+
+"This is a string"
+
+
+variable = "Bob"
+
+
+print(variable)
+
+
+integer = 9
+
+
+a_float = 9.01
+
+
+a_list = ["Bob", "Sally"]
+
+
+a_tuple = (1,2,3,"a","b","c")
+
+
+a_dictionary = {"index1":"value1" , "index2":"value2"}
+
+
+Boolean = True
+
+
+print(type(variable))
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# Utilize the type() function
+
+
+number = 10
+print(type(number))
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
