@@ -664,3 +664,207 @@ print(type(number))
 # =========================================================================================================
 # =========================================================================================================
 
+answer = True
+
+
+print(type(answer))
+
+
+newAnswer = False
+
+
+print(type(newAnswer))
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+a = 500
+b = 30
+
+
+# 1. Run an if/else statement that prints confirmation when the condition is True:
+if a > b: print(str(a) + " is greater than " + str(b))
+else: print("Attempt failed")
+
+
+# 2. Run an if/else statement that prints when the condition is False:
+if a == b: print(str(a) + " is equal to " + str(b))
+else: print("SUCCESS!!! " + str(a) + " does NOT equal " + str(b) )
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+import ourModule
+
+
+if __name__ == "__main__":
+    results = ourModule.getNumbers(5, 9)
+    print(results)
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+import datetime
+
+
+currentTime = datetime.datetime.now()
+
+
+print(currentTime)
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+# 1. Import the random module:
+import random
+
+
+# 2. Use it to display a random number between 1 and 100:
+print(random.randrange(1, 100))
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+num1 = 12
+key = True
+
+
+if num1 == 12:
+    if key:
+        print("Yes! Num1 equals 12 and you have the key!")
+    else:
+        print("Well, Num1 indeed equals 12, but you don't have the key.")
+else:
+    print("Oh noes!  Something went wrong!")
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+a = 50
+b = 100
+
+
+x = 35
+
+
+# 1. Execute an If statement:
+if b > a: print(str(b) + " is a larger number than " + str(a) + "!")
+
+
+# 2. Use the Elif keyword within the if statement:
+elif b == a: print("The two numbers are equal")
+
+
+# 3. Use the Else keyword within the if statement:
+else: print(str(a) + " is a larger number than " + str(b))
+
+
+# 4. Execute a nested If statement:
+if x > 10:
+    print("The mystery number is larger than 10, ")
+    if x > 20:
+        print("and it is larger than 20 as well")
+    else:
+        print("but less than 21")
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+x = "Good-bye"
+y = 45
+z = 105
+
+
+# 1. Run a condition in an if statement:
+if z > y: print("The value of z is larger than the value of y")
+else: print("The value of z is not greater than y")
+
+
+# 2. Use the bool() function to evaluate values:
+print(bool("Hello"))
+print(bool(15))
+print(bool(x))
+print(bool(y))
+# Note: Almost any value evaluates to "True" so long as it has some sort of content. Any string is True, unless empty. Any number is True except for zero.  Any list, tuple, set, or dictionary is True, unless empty.
+
+
+# 3. Use the isinstance() function to check whether a number is an integer:
+w = isinstance(52, int)
+print(w)
+# Note:  The isinstance() function will return True if the specified object is of the specified type.
+# Also, if the type parameter is a tuple, then the function will return True so long as the object is one of the types in the tuple:
+v = isinstance("Hello", (str, float, int, str, list, dict))
+print(v)
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+#################
+##  For Loop ##
+#################
+
+
+# Initialize i to be zero:
+i = 0
+# A For Loop will cycle thru the block of code a defined number of times.
+# Set that number of times to 10:
+for i in range(10):
+    # print the wild card value of which iteration it is (which starts at zero) and then remember to set the format of what the wild card is
+    print("{} iteration through the loop.".format(i))
+    # In shorthand, write i = i + 1, to tell it to add one to it each cycle.
+    i += 1
+
+
+
+
+
+
+
+
+
+
+#################
+##  While Loop ##
+#################
+
+
+# Initialize i to be zero:
+i = 0
+# A While Loop will cycle thru the block of code indefinitely until a set parameter has been reached.
+# Set that parameter to have a value of 10:
+while i < 10:
+    # print the wild card value of which iteration it is (which starts at zero) and then remember to set the format of what the wild card is
+    print("{} iteration through the loop.".format(i))
+    # IMPORTANT:  In order to reach a "False" eventually of i being equal to 10, instruct the code to add one to the value of i each iteration.
+    # Use shorthand, write i = i + 1:
+    i += 1
+# Caution:  While loops have a much greater potential to glitch into becoming an infinite loop!
+
+
+
