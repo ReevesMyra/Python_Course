@@ -844,11 +844,6 @@ for i in range(10):
 
 
 
-
-
-
-
-
 #################
 ##  While Loop ##
 #################
@@ -868,3 +863,453 @@ while i < 10:
 
 
 
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+iteration = 1
+brokenLoop = 1
+skipFive = 0
+elseCounting = 1
+
+
+
+
+# 1. Execute a While loop:
+while iteration < 11:
+    print(iteration)
+    iteration += 1
+
+
+
+
+print("--------------------------")
+# 2. Use the "break" statement within a while loop to stop it running despite the while condition still being true:
+while brokenLoop < 11:
+    print(brokenLoop)
+    if brokenLoop == 3: break
+    brokenLoop += 1
+
+
+
+
+print("--------------------------")
+# 3. Use the "continue" statement within a while loop to skip over an iteration:
+while skipFive < 10:
+    skipFive += 1
+    if skipFive == 5: continue
+    print(skipFive)
+
+
+
+
+print("--------------------------")
+# 4. Use the "else" statement within a while loop:
+while elseCounting < 11:
+    print(elseCounting)
+    elseCounting += 1
+else:
+    print("...We have reached the number 10. Counting is done.")
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+sequence = ["fox", "coyote", "wolf"]
+brokenSequence = ["cup", "saucer", "plate", "fork", "spoon", "knife", "table", "chair"]
+skipBanana = ["peach", "papaya", "banana", "plum", "pear"]
+
+
+# A for loop doesn't need an indexing variable to be set beforehand
+
+
+
+
+# 1. Execute a For loop:
+for x in sequence: print(x)
+
+
+# Iterating thru the characters of a word:
+for x in "Gourmet": print(x)
+
+
+
+
+# 2. Use the "break" statement within a for loop to stop it before it loops thru all of the items:
+for x in brokenSequence:
+    print(x)
+    if x == "knife": break
+
+
+
+
+# 3. Use the "continue" statement within a for loop to skip over a specified element:
+for x in skipBanana:
+    if x == "banana": continue
+    print(x)
+
+
+
+
+# 4. Use the range() function within a for loop to return a sequence of numbers, starting at zero and ending at a specified number:
+for x in range(20): print(x)    # It will count 20 times, meaning that the displayed numbers will stop at 19.
+print("____________________")
+# To count between a certain range of numbers, specify which integer to start at followed by which one to stop just before:
+for x in range(10, 21): print(x)
+print("____________________")
+# To count using a different incremental value, specify it as the third parameter:
+for x in range(3, 31, 3): print(x)
+
+
+
+
+
+
+print("____________________")
+
+
+
+
+
+
+# 5. Use the "else" keyword within a for loop to print something once the loop has ended:
+for x in range(11): print(x)
+else: print("We have now finished counting to 10")
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+name = 'Python'
+
+
+# Count the total number of characters within the string:
+print(len(name))
+
+
+# Use the built-in enumerate method to iterate through all of the elements within the string:
+for i in enumerate(name): print(i)
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+
+
+# Create a variable:
+mySentence = "loves the color"
+
+
+# Create a list:
+colorList = ['red', 'white', 'blue', 'pink', 'purple', 'black', 'green']
+
+
+# Create a function to show a sentence for each color
+def color_function(nameParameter):
+    # Create a temporary list and leave it empty:
+    tempList = []
+    # Iterate thru the color list:
+    for i in colorList:
+        # Use a variable named "message" and insert three wild cards and format those strings by plugging in the nameParameter, then the mySentence variable, and lastly followed by the iteration:
+        message = "{} {} {}".format(nameParameter, mySentence, i)
+        # Append each iteration's result into the end of the list to form an array:
+        tempList.append(message)
+    # After the entire list of colors is finished, end the loop with a "return" command to show the array of resulting sentences:
+    return tempList
+   
+
+
+# Call the function with the desired argument name and save the result inside a variable
+colorSentences = color_function("Sally")
+
+
+# Loop thru the array of sentences to print each to the screen. This step is needed so that the result doesn't look like an array.  It is needed so that instead we see only the resulting sentences each one after another.
+for i in colorSentences:
+    print(i)
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+# Create a variable:
+loopingSentence = "loves the color"
+
+
+# Create a list:
+colors = ['red', 'white', 'blue', 'pink', 'purple', 'black', 'green']
+
+
+# Create a function to show a sentence for each color
+def colorSententence_function(nameParameter):
+    # Create a temporary list and leave it empty:
+    tempList = []
+    # Iterate thru the color list:
+    for i in colors:
+        # Use a variable named "message" and insert three wild cards and format those strings by plugging in the nameParameter, then the loopingSentence variable, and lastly followed by the iteration:
+        message = "{} {} {}".format(nameParameter, loopingSentence, i)
+        # Append each iteration's result into the end of the list to form an array:
+        tempList.append(message)
+    # After the entire list of colors is finished, end the loop with a "return" command to show the array of resulting sentences:
+    return tempList
+   
+
+
+# Create a function to get the user's name and then loop it thru all the sentences:
+def getName_function():
+    go = True
+    while go:
+        userName = input('What is your name? ')
+        if userName == "": print("Please provide a name")
+        elif userName == 'Myra': print("That name is not allowed. Sorry!")
+        else: go = False
+    resultingSentence = colorSententence_function(userName)
+    for i in resultingSentence: print(i)
+
+
+# Call the function
+getName_function()
+
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+# 1. Create a function:
+def my_function():
+    print("Hi there, hello!  You are seeing this because you called this function!")
+
+
+# 2. Call the function:
+my_function()
+
+
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+# Note: Python doesn't have built-in support for anything called "Arrays."  Lists need to be used instead.
+
+
+# 1. Create an array:
+recyclables = ['glass', 'cardboard', 'paper', 'aluminum', 'steel']
+
+
+# 2. Loop through all the elements of the array using a for loop:
+for r in recyclables: print(r)
+
+
+# 3. Use the count() method on the array:
+number = len(recyclables)
+print(number)
+
+
+# 4. Use the sort() method on the array:
+recyclables.sort()
+for alphabetized in recyclables: print(alphabetized)
+
+
+# Reverse alphabetical order:
+recyclables.sort(reverse=True)
+for reverseOrder in recyclables: print(reverseOrder)
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+def multiply(i):
+    return i * i;
+
+
+print(multiply(3))
+
+
+
+
+# The lambda keyword is used as an anonymous function.  That is a single-line function that has no name and can have any number of arguments but only one expression.  It is used for a shorter amount of time than a regular function, and is used when you want to pass another function in as an argument.
+y = lambda x: x * x * x
+
+
+print(y(20))
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+# Create a lambda function:
+addition = lambda x: x + 10
+
+
+# Call the function:
+print(addition(5))
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+location1 = "Seattle"
+location2 = "Iceland"
+location3 = "London"
+
+
+# Wildcard placeholders can be used to reserve a spot for a variable before explicitly saying what the variable is. Use {} to do so.
+print("I flew from {} to {} to get to {}". format(location1, location2, location3))
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+fname = "Daniel"
+lname = "Christie"
+
+
+print("Hello there, {} {}! Welcome!".format(fname, lname))
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+# A placeholder doesn't need to be blank inside of the {}.  Instead, they can be identified using word or numbered indexes.
+
+
+# A 2 decimal format for listing prices can be created using .2f
+
+
+# Challenge = Execute a format() method to show a price:
+salesText = "Buy now for only {price:.2f} dollars!"
+print(salesText.format(price = 49))
+
+
+personIntroduction = "Hello!  My name is {firstname}, and I am {age} years old".format(firstname="Johnny", age=36)
+print(personIntroduction)
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+# The format() function can do more than just format strings!  It can also convert a value into a specific data type format.  Plus, it can also format values into binary or into floats.
+
+
+# To do so, the format() function takes 2 parameters -- the values that need to be formatted and the format specification
+
+
+
+
+# To format a number into binary:
+binaryExample = format(8, 'b')
+print(binaryExample)
+
+
+# To format a number into hexadecimal:
+hexadecimalExample = format(4, 'x')
+print(hexadecimalExample)
+
+
+# To format a number into percentage:
+percentageExample = format(1, '%')
+print(percentageExample)
+
+
+# Formatting a value into different data types, written out in string format concatenation:
+print("Here is the number 3 written as... binary: {0:b}, hexadecimal: {0:x}, percentage: {0:%}".format(3))
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+
+
+# Execute format() functions:
+
+
+rightAlign = format(4, '>')
+print(rightAlign)
+
+
+centerAlign = format(40, '^')
+print(centerAlign)
+
+
+leftAlign = format(400, '<')
+print(leftAlign)
+
+
+commaThousand = format(4000, ',')
+print(commaThousand)
+
+
+unicodeCharacter = format(40000, 'c')
+print(unicodeCharacter)
+
+
+octalFormat = format(400000, 'o')
+print(octalFormat)
+
+
+underscoreThousand = format(4000000, '_')
+print(underscoreThousand)
+
+
+binaryFormat = format(40000000, 'b')
+print(binaryFormat)
+
+
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
+
+def getSum(number1, number2):
+    answer = number1 + number2
+    print("The sum is {}".format(answer))
+
+
+
+
+# Variables can be used to store functions.
+additionVariable = getSum
+
+
+additionVariable(2, 4)
+
+
+
+
+# Variables can also be used to store entire dictionaries of information.
+# Variables can also be used to store an extensive list of items.
+
+# =========================================================================================================
+# =========================================================================================================
+# =========================================================================================================
